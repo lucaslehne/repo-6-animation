@@ -1,0 +1,85 @@
+body{
+  background: radial-gradient(#68c197, #17257d);
+  background-size: 100% 20px;
+}
+
+#container {
+  position: relative;
+  margin: 0 auto;
+  top: 150px;
+  height: 250px;
+  width: 250px;
+  background: #676a69;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 5px;
+  box-shadow: 10px 5px  #000;
+  border-color: #676a69;
+}
+#round{
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  top: 170px;
+  height: 40px;
+  width: 50px;
+  background: #000;
+  border-radius: 50px
+}
+
+
+#computer {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: 195px;
+  height: 195px;
+  background:#607dcd;
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+}
+
+#computer:animation {
+  animation-name: color-change;
+  animation-duration: 5s;
+  animation-play-state: paused;
+  animation-iteration-count: infinite;
+}
+
+#power {
+  position: relative;
+  left: 225px;
+  bottom: -225px;
+  height: 10px;
+  width: 10px;
+  background: red;
+  border-style: solid;
+  border-width: 3px;
+}
+
+#power:hover{
+  background: #68c197;
+  animation-play-state: running;
+}
+
+@keyframes  {
+  0% {
+    background: #000;
+  }
+  20% {
+    background: #0a1123;
+  }
+}
+  40% {
+    background: #18254a;
+}
+  60% {
+    background: #15237b;
+}
+  80% {
+    background: #252e95;
+}
+  100% {
+    background: #607dcd;
+}
