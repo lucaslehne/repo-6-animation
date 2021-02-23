@@ -40,13 +40,6 @@ body{
   border-style: solid;
 }
 
-#computer:animation {
-  animation-name: color-change;
-  animation-duration: 5s;
-  animation-play-state: paused;
-  animation-iteration-count: infinite;
-}
-
 #power {
   position: relative;
   left: 225px;
@@ -62,6 +55,10 @@ body{
   background: #68c197;
   animation-play-state: running;
 }
+
+/*********** Keyframes******
+
+*****/
 
 @keyframes  {
   0% {
