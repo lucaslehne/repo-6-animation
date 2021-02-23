@@ -24,21 +24,11 @@ body{
   height: 40px;
   width: 50px;
   background: #000;
-  border-radius: 50px
+  border-radius: 50px;
 }
 
 
-#computer {
-  position: absolute;
-  left: 25px;
-  top: 25px;
-  width: 195px;
-  height: 195px;
-  background:#607dcd;
-  border-radius: 20px;
-  border-width: 3px;
-  border-style: solid;
-}
+
 
 #power {
   position: relative;
@@ -50,33 +40,69 @@ body{
   border-style: solid;
   border-width: 3px;
 }
-
 #power:hover{
   background: #68c197;
-  animation-play-state: running;
 }
+
+#power:hover + #computer{
+
+  animation-duration: 10s;
+  animation-name: color;
+  animation-play-state: infinite;
+}
+
+#computer {
+  position: absolute;
+  left: 25px;
+  top: 25px;
+  width: 195px;
+  height: 195px;
+  background:#000;
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: solid;
+  animation-name:  color;
+
+}
+
+
 
 /*********** Keyframes******
 
 *****/
 
-@keyframes  {
+@keyframes color{
   0% {
     background: #000;
   }
-  20% {
+  10% {
     background: #0a1123;
   }
-}
-  40% {
+  20% {
     background: #18254a;
-}
-  60% {
+  }
+  30% {
     background: #15237b;
-}
-  80% {
+  }
+  40% {
     background: #252e95;
-}
+  }
+  50% {
+    background: #252e95;
+  }
+  60% {
+    background: #252e95;
+  }
+  70% {
+    background: #15237b;
+  }
+  80% {
+    background: #18254a;
+  }
+  90% {
+    background: #0a1123;
+  }
   100% {
-    background: #607dcd;
+    background: #FFF;
+  }
 }
