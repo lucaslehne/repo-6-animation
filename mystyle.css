@@ -1,3 +1,10 @@
+@font-face {
+  font-family: roboto;
+  src: url(fonts/roboto/Roboto-Light.ttf);
+}
+
+
+
 body{
   background: radial-gradient(#68c197, #17257d);
   background-size: 100% 20px;
@@ -48,7 +55,8 @@ body{
 
   animation-duration: 10s;
   animation-name: color;
-  animation-play-state: infinite;
+  animation-play-state: running;
+  animation-iteration-count: infinite;
 }
 
 #computer {
@@ -65,6 +73,23 @@ body{
 
 }
 
+
+
+h1{
+  font-family: roboto;
+  text-transform: uppercase;
+  text-align: center;
+  color: red;
+  text-shadow: 3px 3px 5px #000;
+  font-size: 26px;
+  padding: 25px;
+  letter-spacing: 5px;
+  animation-duration: 1s;
+  animation: blink 5s linear infinite;
+  animation-play-state: running;
+  animation-iteration-count: infinite linear;
+  animation-name: flash;
+}
 
 
 /*********** Keyframes******
@@ -100,9 +125,22 @@ body{
     background: #18254a;
   }
   90% {
-    background: #0a1123;
+    background: #fff;
   }
   100% {
-    background: #FFF;
+    background: #000;
+  }
+}
+
+/******flicker*******
+
+*******/
+
+@keyframes flash {
+  50%{
+    opacity: 0;
+  }
+  80%{
+    opacity: .5;
   }
 }
